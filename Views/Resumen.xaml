@@ -10,6 +10,10 @@
             Text="RESUMEN"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <Label x:Name="lbluser"
+       FontSize="16"
+       TextColor="red"
+       HorizontalTextAlignment="End"/>
         
         <Grid>
             <Grid.RowDefinitions>

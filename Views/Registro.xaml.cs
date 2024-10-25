@@ -4,11 +4,13 @@ public partial class Registro : ContentPage
 {
     double costo = 1500.0;
     double porcentajecuota = 0.04;
+    string user_global = "";
     public Registro(string user)
 	{
 		InitializeComponent();
+        dFechas.Date = DateTime.Now.Date;
         lbluser.Text = "Usuario Conectado " + user;
-        
+        user_global = user;
     }
 
       private void btnPagomes_Clicked(object sender, EventArgs e)
@@ -39,12 +41,12 @@ public partial class Registro : ContentPage
     private void btnResumen_Clicked(object sender, EventArgs e)
     {
         int monto = int.Parse(txtmontoinicial.Text);
-        string fecha = dFechas.Date.ToString();
+        string fecha = dFechas.Date.ToString("MM/dd/yyyy");
         string pais = pkpais.Items[pkpais.SelectedIndex].ToString();
         string ciudad = pkciudades.Items[pkciudades.SelectedIndex].ToString();
         double montofaltante = costo - monto;
         double pagoMensual = (montofaltante / 4) * (1 + porcentajecuota);
-        Navigation.PushAsync(new Resumen(txtnombre.Text, txtapellido.Text, txtedad.Text, fecha, pais, ciudad, monto, pagoMensual));
+        Navigation.PushAsync(new Resumen(user_global,txtnombre.Text, txtapellido.Text, txtedad.Text, fecha, pais, ciudad, monto, pagoMensual));
     }
 
 }
