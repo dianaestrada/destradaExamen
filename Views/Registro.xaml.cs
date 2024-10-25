@@ -42,7 +42,7 @@ public partial class Registro : ContentPage
     {
         int monto = int.Parse(txtmontoinicial.Text);
         string fecha = dFechas.Date.ToString("MM/dd/yyyy");
-        string pais = pkpais.Items[pkpais.SelectedIndex].ToString();
+         string pais = pkpais.Items[pkpais.SelectedIndex].ToString();
         string ciudad = pkciudades.Items[pkciudades.SelectedIndex].ToString();
         double montofaltante = costo - monto;
         double pagoMensual = (montofaltante / 4) * (1 + porcentajecuota);
