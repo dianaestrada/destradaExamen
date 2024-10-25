@@ -68,20 +68,19 @@
                    Grid.Column="0" 
                    Grid.Row="6"></Label>
             <Label x:Name="lblmonto" 
-                 Grid.Column="7" 
-                 Grid.Row="6"></Label>
+                   Grid.Column="7" 
+                   Grid.Row="6"></Label>
             <Label Text="Pago Mensual" 
                    Grid.Column="0" 
                    Grid.Row="7"></Label>
-
-            <Label x:Name="lblpagoM" 
-                Grid.Column="8" 
-                Grid.Row="7"></Label>
+            <Label x:Name="lblpagomes" 
+                   Grid.Column="8" 
+                   Grid.Row="7"></Label>
             <Label Text="Pago Total" 
                    Grid.Column="0" 
-                  Grid.Row="8"></Label>
+                   Grid.Row="8"></Label>
 
-            <Label x:Name="lblpagoT" 
+            <Label x:Name="lblpagototal" 
                    Grid.Column="9" 
                    Grid.Row="8"></Label>
         </Grid>
